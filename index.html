@@ -1,161 +1,556 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Sell Your House Fast UK</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Homeowner Solutions</title>
+  <meta name="description" content="Sell your house faster, improve your property value, and discover smart home upgrades." />
 
-<style>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-body{
-font-family: Arial, Helvetica, sans-serif;
-margin:0;
-background:#f5f7fa;
-color:#333;
-}
+    :root {
+      --bg: #f5f5f3;
+      --text: #1f1f1f;
+      --muted: #666;
+      --card: rgba(255, 255, 255, 0.92);
+      --primary: #1f3b73;
+      --primary-hover: #152a52;
+      --accent: #c8a96b;
+      --border: rgba(255,255,255,0.18);
+      --shadow: 0 20px 50px rgba(0,0,0,0.12);
+      --radius: 18px;
+      --max: 1180px;
+    }
 
-.header{
-background-image:url("https://yopisimoni.github.io/sell-house-fast/living-room.jpg");
-background-size:cover;
-background-position:center;
-color:white;
-padding:120px 20px;
-text-align:center;
-position:relative;
-}
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-.header::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-right:0;
-bottom:0;
-background:rgba(0,0,0,0.35);
-}
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
 
-.header h1,
-.header p{
-position:relative;
-z-index:2;
-}
+    .hero {
+      min-height: 88vh;
+      background:
+        linear-gradient(rgba(10, 16, 28, 0.55), rgba(10, 16, 28, 0.55)),
+        url("https://yopisimoni.github.io/sell-house-fast/living-room.jpg");
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
 
-.header h1{
-margin:0;
-font-size:40px;
-}
+    .hero-inner {
+      width: 100%;
+      max-width: var(--max);
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: center;
+    }
 
-.header p{
-margin-top:10px;
-font-size:18px;
-}
+    .hero-copy {
+      color: white;
+    }
 
-.container{
-max-width:1000px;
-margin:auto;
-padding:40px 20px;
-}
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #f0d8a8;
+      margin-bottom: 14px;
+      font-weight: 700;
+    }
 
-.card{
-background:white;
-border-radius:10px;
-padding:30px;
-margin-bottom:30px;
-box-shadow:0 5px 20px rgba(0,0,0,0.08);
-text-align:center;
-}
+    .hero h1 {
+      font-size: clamp(38px, 6vw, 68px);
+      line-height: 1.05;
+      margin-bottom: 18px;
+      max-width: 700px;
+    }
 
-.card h2{
-margin-top:0;
-}
+    .hero p {
+      font-size: 18px;
+      max-width: 620px;
+      color: rgba(255,255,255,0.92);
+      margin-bottom: 28px;
+    }
 
-.button{
-display:inline-block;
-background:#2a7de1;
-color:white;
-padding:14px 28px;
-border-radius:6px;
-text-decoration:none;
-font-weight:bold;
-margin-top:15px;
-}
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 26px;
+    }
 
-.button:hover{
-background:#1f63b7;
-}
+    .btn {
+      display: inline-block;
+      padding: 15px 24px;
+      border-radius: 999px;
+      font-weight: 700;
+      transition: 0.25s ease;
+    }
 
-.footer{
-text-align:center;
-padding:30px;
-font-size:13px;
-color:#777;
-}
+    .btn-primary {
+      background: var(--accent);
+      color: #111;
+    }
 
-</style>
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
 
+    .btn-secondary {
+      border: 1px solid rgba(255,255,255,0.4);
+      color: white;
+      backdrop-filter: blur(8px);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255,255,255,0.15);
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .point {
+      padding: 10px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.16);
+      color: white;
+      font-size: 14px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.12);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(16px);
+      border-radius: 24px;
+      padding: 26px;
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-card h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .hero-card p {
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 18px;
+      font-size: 15px;
+    }
+
+    .mini-list {
+      display: grid;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .mini-item {
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: rgba(255,255,255,0.09);
+      border: 1px solid rgba(255,255,255,0.14);
+      font-size: 14px;
+    }
+
+    .section {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 18px;
+      font-size: 36px;
+    }
+
+    .section-subtitle {
+      text-align: center;
+      max-width: 740px;
+      margin: 0 auto 42px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .trust-bar {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 18px;
+      margin-top: -42px;
+      position: relative;
+      z-index: 2;
+      max-width: var(--max);
+      padding: 0 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .trust-box {
+      background: white;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 22px 20px;
+      text-align: center;
+    }
+
+    .trust-box strong {
+      display: block;
+      font-size: 24px;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .trust-box span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+    }
+
+    .card-top {
+      height: 180px;
+      background-size: cover;
+      background-position: center;
+    }
+
+    .card-content {
+      padding: 26px;
+    }
+
+    .card h3 {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .card ul {
+      list-style: none;
+      display: grid;
+      gap: 8px;
+      margin-bottom: 22px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    .card ul li::before {
+      content: "✓ ";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .card .btn {
+      width: 100%;
+      text-align: center;
+      border-radius: 12px;
+      background: var(--primary);
+      color: white;
+    }
+
+    .card .btn:hover {
+      background: var(--primary-hover);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 20px;
+    }
+
+    .step {
+      background: white;
+      padding: 28px;
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+
+    .step-number {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background: #eef2fb;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #132544, #1f3b73);
+      color: white;
+      border-radius: 28px;
+      padding: 50px 36px;
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .cta h2 {
+      font-size: 34px;
+      margin-bottom: 8px;
+    }
+
+    .cta p {
+      color: rgba(255,255,255,0.9);
+      max-width: 700px;
+    }
+
+    footer {
+      padding: 32px 20px 50px;
+      text-align: center;
+      color: #777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 980px) {
+      .hero-inner,
+      .grid,
+      .steps,
+      .trust-bar,
+      .cta {
+        grid-template-columns: 1fr;
+        display: grid;
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 70px 20px;
+      }
+
+      .hero-card {
+        margin-top: 8px;
+      }
+
+      .cta {
+        text-align: center;
+      }
+
+      .cta .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .section-title {
+        font-size: 28px;
+      }
+
+      .card h3 {
+        font-size: 22px;
+      }
+
+      .cta h2 {
+        font-size: 28px;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="header">
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="eyebrow">Modern property solutions</div>
+        <h1>Sell smarter. Upgrade beautifully. Improve your home's value.</h1>
+        <p>
+          A clean, modern hub for homeowners looking to sell faster, discover elegant decoration ideas,
+          and find useful tools for better home improvement decisions.
+        </p>
 
-<h1>Smart Homeowner Solutions</h1>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="YOUR_AWIN_LINK">Check Your Property Value</a>
+          <a class="btn btn-secondary" href="#solutions">Explore Home Solutions</a>
+        </div>
 
-<p>Helping homeowners sell, upgrade and improve their homes.</p>
+        <div class="hero-points">
+          <div class="point">Fast selling options</div>
+          <div class="point">Decoration inspiration</div>
+          <div class="point">Smart homeowner tools</div>
+        </div>
+      </div>
 
-</div>
+      <div class="hero-card">
+        <h3>Why homeowners use this</h3>
+        <p>
+          Whether you're thinking of selling now or simply improving your property first, this page helps
+          you explore practical next steps in one place.
+        </p>
 
-<div class="container">
+        <div class="mini-list">
+          <div class="mini-item">Get a faster selling route without relying only on traditional methods.</div>
+          <div class="mini-item">Discover decor ideas that can make a stronger first impression.</div>
+          <div class="mini-item">Find tools and upgrades that support better home presentation.</div>
+        </div>
 
-<div class="card">
+        <a class="btn btn-primary" href="YOUR_AWIN_LINK">Start with Your House Value</a>
+      </div>
+    </div>
+  </header>
 
-<h2>Sell Your House Fast</h2>
+  <section class="trust-bar">
+    <div class="trust-box">
+      <strong>Fast</strong>
+      <span>Simple homeowner options</span>
+    </div>
+    <div class="trust-box">
+      <strong>Modern</strong>
+      <span>Clean design inspiration</span>
+    </div>
+    <div class="trust-box">
+      <strong>Smart</strong>
+      <span>Useful tools and ideas</span>
+    </div>
+    <div class="trust-box">
+      <strong>Focused</strong>
+      <span>Built for property-minded visitors</span>
+    </div>
+  </section>
 
-<p>
-Get a fast cash offer for your property and avoid long estate agent delays.
-Many homeowners are now choosing faster selling options.
-</p>
+  <section class="section" id="solutions">
+    <h2 class="section-title">Three smart paths for homeowners</h2>
+    <p class="section-subtitle">
+      This page is designed to support the homeowner journey from selling decisions to visual upgrades and practical tools.
+    </p>
 
-<a class="button" href="YOUR_AWIN_LINK">
-Check Your Property Value
-</a>
+    <div class="grid">
+      <div class="card">
+        <div class="card-top" style='background-image:url("https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&w=1200&q=80");'></div>
+        <div class="card-content">
+          <h3>Sell Your House Fast</h3>
+          <p>Explore faster property selling options if you want a simpler route and less waiting.</p>
+          <ul>
+            <li>Good for motivated sellers</li>
+            <li>Clear next step</li>
+            <li>Fast value-check action</li>
+          </ul>
+          <a class="btn" href="YOUR_AWIN_LINK">Check Property Value</a>
+        </div>
+      </div>
 
-</div>
+      <div class="card">
+        <div class="card-top" style='background-image:url("https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=80");'></div>
+        <div class="card-content">
+          <h3>Decoration Ideas</h3>
+          <p>Find elegant home inspiration that helps your space feel more premium, warm, and attractive.</p>
+          <ul>
+            <li>Interior improvement ideas</li>
+            <li>Visual home styling</li>
+            <li>Value-boosting inspiration</li>
+          </ul>
+          <a class="btn" href="#">Explore Decoration Tools</a>
+        </div>
+      </div>
 
-<div class="card">
+      <div class="card">
+        <div class="card-top" style='background-image:url("https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=1200&q=80");'></div>
+        <div class="card-content">
+          <h3>Homeowner Tools</h3>
+          <p>Discover practical tools and useful upgrades that support better maintenance and presentation.</p>
+          <ul>
+            <li>Useful home essentials</li>
+            <li>Maintenance support</li>
+            <li>Practical upgrade path</li>
+          </ul>
+          <a class="btn" href="#">View Home Tools</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-<h2>Home Decoration Ideas</h2>
+  <section class="section">
+    <h2 class="section-title">How it works</h2>
+    <p class="section-subtitle">
+      Keep it simple. Start with your goal, choose your path, and take the next step.
+    </p>
 
-<p>
-Discover modern decoration tools and home improvement ideas that increase your property value.
-</p>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <h3>Choose your direction</h3>
+        <p>Do you want to sell quickly, improve your home's look, or find tools that help you upgrade it?</p>
+      </div>
 
-<a class="button" href="#">
-Explore Decoration Tools
-</a>
+      <div class="step">
+        <div class="step-number">2</div>
+        <h3>Explore the best option</h3>
+        <p>Use the page to discover solutions that match your situation instead of searching randomly.</p>
+      </div>
 
-</div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <h3>Take action confidently</h3>
+        <p>Click through to the next step and move forward with a cleaner, more focused homeowner plan.</p>
+      </div>
+    </div>
+  </section>
 
-<div class="card">
+  <section class="section">
+    <div class="cta">
+      <div>
+        <h2>Ready to see your next best move?</h2>
+        <p>
+          Start with the strongest first step for many property owners: checking whether a faster house-selling option fits your situation.
+        </p>
+      </div>
+      <a class="btn btn-primary" href="YOUR_AWIN_LINK">Check Your Property Value</a>
+    </div>
+  </section>
 
-<h2>Essential Homeowner Tools</h2>
-
-<p>
-Professional tools every homeowner should have for repairs, upgrades and home maintenance.
-</p>
-
-<a class="button" href="#">
-View Home Tools
-</a>
-
-</div>
-
-</div>
-
-<div class="footer">
-
-This site may contain affiliate links that help support our work.
-
-</div>
+  <footer>
+    This site may contain affiliate links that help support our work.
+  </footer>
 
 </body>
 </html>
