@@ -7,42 +7,68 @@
 <style>
 
 body{
-font-family: Arial;
-background:#f4f4f4;
-text-align:center;
+font-family: Arial, Helvetica, sans-serif;
 margin:0;
+background:#f5f7fa;
+color:#333;
+}
+
+.header{
+background:linear-gradient(135deg,#1e3c72,#2a5298);
+color:white;
+padding:60px 20px;
+text-align:center;
+}
+
+.header h1{
+margin:0;
+font-size:40px;
+}
+
+.header p{
+margin-top:10px;
+font-size:18px;
 }
 
 .container{
-max-width:900px;
+max-width:1000px;
 margin:auto;
-padding:40px;
+padding:40px 20px;
+}
+
+.card{
 background:white;
-}
-
-h1{
-color:#222;
-}
-
-.section{
-margin-top:40px;
+border-radius:10px;
 padding:30px;
-border:1px solid #ddd;
-border-radius:8px;
+margin-bottom:30px;
+box-shadow:0 5px 20px rgba(0,0,0,0.08);
+text-align:center;
 }
 
-button{
-background:#2c7be5;
+.card h2{
+margin-top:0;
+}
+
+.button{
+display:inline-block;
+background:#2a7de1;
 color:white;
-padding:15px 25px;
-border:none;
-border-radius:5px;
-font-size:16px;
-cursor:pointer;
+padding:14px 28px;
+border-radius:6px;
+text-decoration:none;
+font-weight:bold;
+margin-top:15px;
 }
 
-button:hover{
-background:#1a5dc9;
+.button:hover{
+background:#1f63b7;
+}
+
+.footer{
+text-align:center;
+padding:30px;
+font-size:13px;
+color:#777;
 }
 
 </style>
@@ -51,55 +77,64 @@ background:#1a5dc9;
 
 <body>
 
-<div class="container">
+<div class="header">
 
 <h1>Smart Homeowner Solutions</h1>
 
 <p>Helping homeowners sell, upgrade and improve their homes.</p>
 
+</div>
 
-<div class="section">
+<div class="container">
+
+<div class="card">
 
 <h2>Sell Your House Fast</h2>
 
-<p>Get a fast cash offer for your property. Avoid estate agent delays and long waiting times.</p>
+<p>
+Get a fast cash offer for your property and avoid long estate agent delays.
+Many homeowners are now choosing faster selling options.
+</p>
 
-<a href="YOUR_AWIN_LINK">
-<button>Check Your Property Value</button>
+<a class="button" href="YOUR_AWIN_LINK">
+Check Your Property Value
 </a>
 
 </div>
 
-
-<div class="section">
+<div class="card">
 
 <h2>Home Decoration Ideas</h2>
 
-<p>Discover decoration tools and modern home upgrades.</p>
+<p>
+Discover modern decoration tools and home improvement ideas that increase your property value.
+</p>
 
-<a href="#">
-<button>See Decoration Tools</button>
+<a class="button" href="#">
+Explore Decoration Tools
 </a>
 
 </div>
 
-
-<div class="section">
+<div class="card">
 
 <h2>Essential Homeowner Tools</h2>
 
-<p>Professional tools every homeowner should have.</p>
+<p>
+Professional tools every homeowner should have for repairs, upgrades and home maintenance.
+</p>
 
-<a href="#">
-<button>View Home Tools</button>
+<a class="button" href="#">
+View Home Tools
 </a>
 
 </div>
 
+</div>
 
-<p style="margin-top:40px;font-size:12px;">
+<div class="footer">
+
 This site may contain affiliate links that help support our work.
-</p>
 
 </div>
 
